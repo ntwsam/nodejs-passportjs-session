@@ -11,7 +11,7 @@ This is **Passportjs with session**. Passport is authentication middleware for *
 ## How to install
 
 ``` bash
-git clone https://github.com/ntwsam/nodejs-passportjs.git
+git clone https://github.com/ntwsam/nodejs-passportjs-session.git
 ```
 ## Requirement
 
@@ -22,6 +22,7 @@ git clone https://github.com/ntwsam/nodejs-passportjs.git
 - GitHub Login
 	- Before using, you must register an application with GitHub. If you have not already done so, a new application can be created at [developer applications](https://github.com/settings/applications/new) within GitHub's settings panel. Your application will be issued a client ID and client secret, which need to be provided to the strategy. You will also need to configure a callback URL which matches the route in your application.
 - MongoDB : for keep database email and username
+- Visual Studio Code or other IDE
 
 ## How to run
 1. Run project with **VSCode**
