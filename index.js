@@ -60,7 +60,7 @@ passport.use(new FacebookStrategy(
 
 app.get('/auth/facebook', passport.authenticate('facebook'))
 
-app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }),
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/' }),
     function (req, res) {
         res.redirect('/')
     })
@@ -89,7 +89,7 @@ passport.use(new GoogleStrategy(
 
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
 
-app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }),
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }),
     function (req, res) {
         res.redirect('/')
     })
@@ -117,7 +117,7 @@ passport.use(new GitHubStrategy({
 
 app.get('/auth/github', passport.authenticate('github', { scope: ['user:email'] }));
 
-app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }),
+app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/' }),
     function (req, res) {
         res.redirect('/');
     });
